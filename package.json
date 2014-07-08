@@ -27,6 +27,9 @@
     "banner",
     "concat"
   ],
+  "dependencies": {
+    "detect-newline": "^0.1.1"
+  },
   "devDependencies": {
     "ava": "0.0.3",
     "grunt": "^0.4.0",

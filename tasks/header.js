@@ -1,4 +1,6 @@
 'use strict';
+var detectNewline = require('detect-newline');
+
 module.exports = function (grunt) {
 	grunt.registerMultiTask('header', 'Add a header', function () {
 		var options = this.options({
@@ -6,7 +8,9 @@ module.exports = function (grunt) {
 		});
 
 		this.files.forEach(function (el) {
-			grunt.file.write(el.dest, options.text + grunt.file.read(el.src[0]));
+			var src = el.src[0];
+			var out = options.text + detectNewline(src) + grunt.file.read(src);
+			grunt.file.write(el.dest, out);
 		});
 	});
 };
