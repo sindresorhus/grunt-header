@@ -15,8 +15,8 @@ $ npm install --save-dev grunt-header
 ```js
 grunt.initConfig({
 	info: 'header text',
-	header: {									// task
-		dist: {									// target
+	header: {
+		dist: {
 			options: {
 				text: '<%= info %>'
 			},
