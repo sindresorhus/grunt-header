@@ -13,6 +13,8 @@ $ npm install --save-dev grunt-header
 ## Usage
 
 ```js
+require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
+
 grunt.initConfig({
 	info: 'header text',
 	header: {
@@ -27,7 +29,6 @@ grunt.initConfig({
 	}
 });
 
-grunt.loadNpmTasks('grunt-header');
 grunt.registerTask('default', ['header']);
 ```
 
