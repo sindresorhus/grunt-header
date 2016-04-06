@@ -1,7 +1,7 @@
-'use strict';
-var fs = require('fs');
-var test = require('ava');
+import fs from 'fs';
+import path from 'path';
+import test from 'ava';
 
-test('adds header', function (t) {
-	t.assert(/^bar\n/.test(fs.readFileSync(__dirname + '/tmp/fixture', 'utf8')));
+test(t => {
+	t.regex(fs.readFileSync(path.join(__dirname, 'tmp/fixture'), 'utf8'), /^bar\n/);
 });
