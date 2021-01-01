@@ -1,4 +1,4 @@
-# grunt-header [![Build Status](https://travis-ci.org/sindresorhus/grunt-header.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-header)
+# grunt-header
 
 > Add a header to files
 
